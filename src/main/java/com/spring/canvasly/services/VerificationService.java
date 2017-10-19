@@ -16,7 +16,7 @@ public class VerificationService {
         Map<String, String> environment = EnvironmentService.getEnvironmentMap();
         System.out.println(" request.body() " + request.body() );
         if( request.body().startsWith(signedRequestPrefix) ) {
-            String signedRequestInput = request.body().substring( signedRequestPrefix.length() );
+            String signedRequestInput = StringEscapeUtils.unescapeHtml ( request.body().substring( signedRequestPrefix.length() ) );
             String decryptedSignedRequest = SecurityService.verifyAndDecodeAsJson( signedRequestInput, environment.get("CANVAS_CONSUMER_SECRET") );
             request.params().put( "signedRequest", StringEscapeUtils.escapeHtml(decryptedSignedRequest) );
             System.out.println(" verification successful . signedRequest " + decryptedSignedRequest );
