@@ -43,6 +43,11 @@ public class SparkMain {
             return "";
         });
 
+        get("/index", (request, response) -> {
+            response.type("application/xml");
+            return new ModelAndView(CanvasService.landingPage(request, response), "canvas.ftl");
+        }, new FreeMarkerEngine());
+
         get("/opentext", (request, response) -> {
             response.type("application/xml");
             return new ModelAndView(CanvasService.landingPage(request, response), "canvas.ftl");
