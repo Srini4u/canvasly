@@ -15,12 +15,12 @@ public class VerificationService {
 
     public static void verify(Request request, Response response) throws Exception {
         Map<String, String> environment = EnvironmentService.getEnvironmentMap();
-        String[] stsrs = request.raw().getParameterMap().get("signed_request");
-        for( int i=0; i<stsrs.length ; i++ ) {
-            System.out.println( i + "   "  + stsrs[i] );
+        if( request.raw().getParameterMap().get("signed_request") != null ) {
+            String decryptedSignedRequest = SecurityService.verifyAndDecodeAsJson( request.raw().getParameterMap().get("signed_request")[0] , environment.get("CANVAS_CONSUMER_SECRET") );
+            System.out.println(" verification successful . signedRequest " + decryptedSignedRequest );
+            request.raw().setAttribute( "signedRequest", decryptedSignedRequest );
+        } else {
+            throw new Exception(" Signed request is missing ");
         }
-        String decryptedSignedRequest = SecurityService.verifyAndDecodeAsJson( request.raw().getParameterMap().get("signed_request")[0] , environment.get("CANVAS_CONSUMER_SECRET") );
-        System.out.println(" verification successful . signedRequest " + decryptedSignedRequest );
-        request.raw().setAttribute( "signedRequest", decryptedSignedRequest );
     }
 }
