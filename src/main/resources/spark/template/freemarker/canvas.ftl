@@ -7,7 +7,7 @@
 <div class="canvasContainer">
     signedRequest <textarea id="signedRequest" rows="5" cols="100"> ${escapedSignedRequest} </textarea> <br/><br/><hr/><br/>
     <input id="canvasPublishMessage" value=""/> <button onclick="canvasPublish( document.getElementById('canvasPublishMessage').value )" > Publish </button> <br/><br/><hr/><br/>
-    Subcribed Message <div id="canvasSubscribed"/> <br/><br/><hr/><br/>
+    Subcribed Message <br/> <br/>  <div id="canvasSubscribed"/> <br/><br/><hr/><br/>
 </div>
 
 
@@ -50,6 +50,7 @@
 
     function onData(message) {
         console.log(' canvas received message from visualforce : ' + message );
+        document.getElementById('canvasSubscribed').innerHTML = message;
     }
 
 </script>
