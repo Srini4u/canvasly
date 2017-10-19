@@ -116,7 +116,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/resources/spark/template/freemarker/canvas.ftl">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="382">
-              <caret line="52" column="72" lean-forward="false" selection-start-line="52" selection-start-column="72" selection-end-line="52" selection-end-column="72" />
+              <caret line="52" column="48" lean-forward="false" selection-start-line="52" selection-start-column="48" selection-end-line="52" selection-end-column="48" />
               <folding />
             </state>
           </provider>
@@ -475,12 +475,12 @@
       <updated>1508331142219</updated>
       <workItem from="1508331145978" duration="1581000" />
       <workItem from="1508358181863" duration="1015000" />
-      <workItem from="1508363708230" duration="14975000" />
+      <workItem from="1508363708230" duration="15171000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17571000" />
+    <option name="totallyTimeSpent" value="17767000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1015" extended-state="6" />
@@ -726,7 +726,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/resources/spark/template/freemarker/canvas.ftl">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="382">
-          <caret line="52" column="72" lean-forward="false" selection-start-line="52" selection-start-column="72" selection-end-line="52" selection-end-column="72" />
+          <caret line="52" column="48" lean-forward="false" selection-start-line="52" selection-start-column="48" selection-end-line="52" selection-end-column="48" />
           <folding />
         </state>
       </provider>

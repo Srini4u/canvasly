@@ -49,10 +49,11 @@
     }]);
 
     function onData(message) {
+        console.log( message );
+        console.log ( JSON.stringify(payload) );
         console.log(' canvas received message from visualforce : ' + message );
-        document.getElementById('canvasSubscribed').innerHTML = message;
+        document.getElementById('canvasSubscribed').innerHTML = JSON.stringify(payload);
     }
-
 </script>
 
 
