@@ -10,7 +10,7 @@
     Subcribed Message <br/> <br/>  <div id="canvasSubscribed"/> <br/><br/><hr/><br/>
     Subcribed Resize Event <br/> <br/>  <div id="canvasResizeSubscribed"/> <br/><br/><hr/><br/>
     Self Resize Servicve <button onclick="showCurrentSize()">Show Current Size</button> <br/>
-    <input id="resizeWidthPx" value="" placeholder="width px"/> &nbsp; &nbsp; <input id="resizeHeightPx" value="" placeholder="height px"/> <button onclick="canvasResize( document.getElementById('resizeWidthPx').value, document.getElementById('resizeHeightPx').value )" > Resize Me </button> <br/><br/><hr/><br/>
+    <input id="resizeWidthPx" value="" placeholder="width px"/> &nbsp; &nbsp; <input id="resizeHeightPx" value="" placeholder="height px"/> <button onclick="resizeMe( document.getElementById('resizeWidthPx').value, document.getElementById('resizeHeightPx').value )" > Resize Me </button> <br/><br/><hr/><br/>
 </div>
 
 
@@ -71,10 +71,16 @@
         onData: onResizeData
     }]);
 
-    function onData(onResizeData) {
+    function onResizeData(message) {
         console.log(' canvas received resize event ');
-        console.log(onResizeData);
+        console.log(message);
         document.getElementById('canvasSubscribed').innerHTML = message.message;
+    }
+
+    function resizeMe(width, height) {
+        console.log(' canvas is trying to resize it self to width ' + width + ' height ' + height );
+        var dimension = Sfdc.canvas.client.size(signedRequest.client);
+        Sfdc.canvas.client.resize(signedRequest.client, {height : height + "px", width : width + "px" } );
     }
 </script>
 

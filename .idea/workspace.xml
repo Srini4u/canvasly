@@ -116,8 +116,8 @@
       <file leaf-file-name="canvas.ftl" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/resources/spark/template/freemarker/canvas.ftl">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="66" column="0" lean-forward="false" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
+            <state relative-caret-position="382">
+              <caret line="83" column="0" lean-forward="false" selection-start-line="83" selection-start-column="0" selection-end-line="83" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -136,6 +136,7 @@
     <findStrings>
       <find>Can not access page without signed request</find>
       <find>signedRequest</find>
+      <find>resizeMe</find>
     </findStrings>
     <dirStrings>
       <dir>C:\heroku-workspace\canvasly\src</dir>
@@ -476,12 +477,12 @@
       <updated>1508331142219</updated>
       <workItem from="1508331145978" duration="1581000" />
       <workItem from="1508358181863" duration="1015000" />
-      <workItem from="1508363708230" duration="17193000" />
+      <workItem from="1508363708230" duration="18193000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="19789000" />
+    <option name="totallyTimeSpent" value="20789000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1015" extended-state="6" />
@@ -726,8 +727,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/spark/template/freemarker/canvas.ftl">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="66" column="0" lean-forward="false" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
+        <state relative-caret-position="382">
+          <caret line="83" column="0" lean-forward="false" selection-start-line="83" selection-start-column="0" selection-end-line="83" selection-end-column="0" />
           <folding />
         </state>
       </provider>
