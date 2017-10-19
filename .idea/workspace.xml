@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a47192e2-27c3-48b7-9dfa-de383b1bc7ba" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/spark/template/freemarker/canvas.ftl" afterPath="$PROJECT_DIR$/src/main/resources/spark/template/freemarker/canvas.ftl" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -116,7 +117,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/resources/spark/template/freemarker/canvas.ftl">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="416">
-              <caret line="39" column="71" lean-forward="false" selection-start-line="39" selection-start-column="71" selection-end-line="39" selection-end-column="71" />
+              <caret line="39" column="29" lean-forward="false" selection-start-line="39" selection-start-column="29" selection-end-line="39" selection-end-column="29" />
               <folding />
             </state>
           </provider>
@@ -475,12 +476,12 @@
       <updated>1508331142219</updated>
       <workItem from="1508331145978" duration="1581000" />
       <workItem from="1508358181863" duration="1015000" />
-      <workItem from="1508363708230" duration="14151000" />
+      <workItem from="1508363708230" duration="14267000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16747000" />
+    <option name="totallyTimeSpent" value="16863000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1015" extended-state="6" />
@@ -726,7 +727,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/resources/spark/template/freemarker/canvas.ftl">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="416">
-          <caret line="39" column="71" lean-forward="false" selection-start-line="39" selection-start-column="71" selection-end-line="39" selection-end-column="71" />
+          <caret line="39" column="29" lean-forward="false" selection-start-line="39" selection-start-column="29" selection-end-line="39" selection-end-column="29" />
           <folding />
         </state>
       </provider>
