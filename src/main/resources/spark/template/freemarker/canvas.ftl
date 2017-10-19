@@ -37,6 +37,7 @@
             name :  namespacePrefix  + canvasTopic,
             payload : message
         });
+        console.log(' published : ' + message + ' to ' + canvasTopic );
     }
 </script>
 
