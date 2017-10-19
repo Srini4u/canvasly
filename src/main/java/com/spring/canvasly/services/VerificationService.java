@@ -12,6 +12,8 @@ public class VerificationService {
     public static void verify(Request request, Response response) throws Exception {
         Map<String, String> environment = EnvironmentService.getEnvironmentMap();
         Map<String, Object> requestBodyMap = asMap( request.body() , "UTF-8");
+        System.out.println(" request body " + request.body()  );
+        System.out.println(" requestBodyMap " + requestBodyMap );
         String signedRequest = SecurityService.verifyAndDecodeAsJson( (String) requestBodyMap.get("signed_request"), environment.get("CANVAS_CONSUMER_SECRET") );
         request.params().put( "signedRequest", signedRequest );
     }

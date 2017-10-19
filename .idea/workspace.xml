@@ -4,7 +4,6 @@
     <list default="true" id="a47192e2-27c3-48b7-9dfa-de383b1bc7ba" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/spring/canvasly/services/VerificationService.java" afterPath="$PROJECT_DIR$/src/main/java/com/spring/canvasly/services/VerificationService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/spring/canvasly/spark/SparkMain.java" afterPath="$PROJECT_DIR$/src/main/java/com/spring/canvasly/spark/SparkMain.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -117,11 +116,11 @@
       <file leaf-file-name="VerificationService.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/spring/canvasly/services/VerificationService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" column="79" lean-forward="false" selection-start-line="14" selection-start-column="79" selection-end-line="14" selection-end-column="79" />
+            <state relative-caret-position="-51">
+              <caret line="15" column="65" lean-forward="false" selection-start-line="15" selection-start-column="65" selection-end-line="15" selection-end-column="65" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#688#718#0" expanded="true" />
+                <element signature="e#819#849#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -478,12 +477,12 @@
       <updated>1508331142219</updated>
       <workItem from="1508331145978" duration="1581000" />
       <workItem from="1508358181863" duration="1015000" />
-      <workItem from="1508363708230" duration="6736000" />
+      <workItem from="1508363708230" duration="6881000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9332000" />
+    <option name="totallyTimeSpent" value="9477000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-21" y="22" width="1932" height="959" extended-state="0" />
@@ -720,11 +719,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/spring/canvasly/services/VerificationService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="79" lean-forward="false" selection-start-line="14" selection-start-column="79" selection-end-line="14" selection-end-column="79" />
+        <state relative-caret-position="-51">
+          <caret line="15" column="65" lean-forward="false" selection-start-line="15" selection-start-column="65" selection-end-line="15" selection-end-column="65" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#688#718#0" expanded="true" />
+            <element signature="e#819#849#0" expanded="true" />
           </folding>
         </state>
       </provider>
