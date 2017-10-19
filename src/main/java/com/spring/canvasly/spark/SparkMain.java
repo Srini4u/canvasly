@@ -24,6 +24,9 @@ public class SparkMain {
         staticFiles.location("/static");
 
         before((request, response) -> {
+            System.out.println(" request params " + request.params() );
+            System.out.println(" request body " + request.body() );
+            System.out.println(" request attrs " + request.attributes() );
             VerificationService.verify(request, response);
         });
 
