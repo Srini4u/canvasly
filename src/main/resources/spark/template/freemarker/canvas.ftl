@@ -7,6 +7,4 @@
 <script>
     var signedRequest = JSON.parse( '${signedRequest}' );
     console.log( signedRequest );
-    signedRequest = JSON.parse( '${escapedSignedRequest}' );
-    console.log( signedRequest );
 </script>
