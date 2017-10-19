@@ -5,6 +5,13 @@
 
 
 <script>
-    var signedRequest = JSON.parse( '${signedRequest}' );
-    console.log( signedRequest );
+
+    Sfdc.canvas(function() {
+        var signedRequest = JSON.parse( '${signedRequest}' );
+        console.log( signedRequest );
+        Sfdc.canvas.oauth.token(signedRequest.oauthToken);
+        console.log( ' username ' + signedRequest.context.user.fullName );
+    });
+
+
 </script>
