@@ -1,5 +1,6 @@
 package com.spring.canvasly.services;
 
+import org.apache.commons.lang.StringEscapeUtils;
 import spark.Request;
 import spark.Response;
 
@@ -16,7 +17,8 @@ public class VerificationService {
         if( request.body().startsWith(signedRequestPrefix) ) {
             String signedRequestInput = request.body().substring( signedRequestPrefix.length() );
             String decryptedSignedRequest = SecurityService.verifyAndDecodeAsJson( signedRequestInput, environment.get("CANVAS_CONSUMER_SECRET") );
-            request.params().put( "signedRequest", decryptedSignedRequest );
+            request.params().put( "signedRequest", StringEscapeUtils.escapeHtml(decryptedSignedRequest) );
+            System.out.println(" verification successful . signedRequest " + decryptedSignedRequest );
         } else {
             throw new Exception(" Signed Request not found ");
         }
