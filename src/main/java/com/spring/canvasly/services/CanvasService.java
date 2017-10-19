@@ -10,7 +10,7 @@ public class CanvasService {
 
     public static Map<String, Object> landingPage(Request request, Response response) {
         Map<String, Object> attributeMap = new HashMap<String, Object>();
-        attributeMap.put( "signedRequest",  request.params().get( "signedRequest" ) );
+        attributeMap.put( "signedRequest",  request.raw().getAttribute("signedRequest" ) );
         return attributeMap;
     }
 

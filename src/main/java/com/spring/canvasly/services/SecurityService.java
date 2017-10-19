@@ -59,10 +59,6 @@ public class SecurityService {
         // return the request as a JSON string.
         String output = writer.toString();
 
-
-//        Object json = mapper.readValue(input, Object.class);
-//        String indented = mapper.writerWithDefaultPrettyPrinter().writeValueAsString(json);
-
         return output;
     }
 

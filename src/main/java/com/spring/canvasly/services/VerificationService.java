@@ -20,7 +20,7 @@ public class VerificationService {
             System.out.println( i + "   "  + stsrs[i] );
         }
         String decryptedSignedRequest = SecurityService.verifyAndDecodeAsJson( request.raw().getParameterMap().get("signed_request")[0] , environment.get("CANVAS_CONSUMER_SECRET") );
-        request.params().put( "signedRequest", StringEscapeUtils.escapeHtml(decryptedSignedRequest) );
         System.out.println(" verification successful . signedRequest " + decryptedSignedRequest );
+        request.raw().setAttribute( "signedRequest", decryptedSignedRequest );
     }
 }
