@@ -29,6 +29,8 @@ public class SecurityService {
 
     public static String verifyAndDecodeAsJson(String input, String secret) throws Exception {
 
+        System.out.println(" verifyAndDecodeAsJson input " + input + " secret " + secret );
+
         String[] split = getParts(input);
 
         String encodedSig = split[0];
