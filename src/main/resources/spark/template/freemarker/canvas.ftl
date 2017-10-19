@@ -50,9 +50,9 @@
 
     function onData(message) {
         console.log( message );
-        console.log ( JSON.stringify(payload) );
-        console.log(' canvas received message from visualforce : ' + message );
-        document.getElementById('canvasSubscribed').innerHTML = JSON.stringify(payload);
+        console.log ( JSON.stringify(message) );
+        console.log(' canvas received message from visualforce : ' + message.message );
+        document.getElementById('canvasSubscribed').innerHTML = JSON.stringify(message);
     }
 </script>
 
