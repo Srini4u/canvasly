@@ -5,6 +5,6 @@
 
 
 <script>
-    var signedRequest = JSON.parse( ${signedRequest} );
+    var signedRequest = JSON.parse( '${signedRequest}'' );
     console.log( signedRequest );
 </script>
