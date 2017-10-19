@@ -28,6 +28,7 @@ public class SparkMain {
         });
 
         exception(Exception.class, (exception, request, response) -> {
+            exception.printStackTrace();
             response.status(400);
             response.type("text/html");
             response.body( exception.getMessage() );
