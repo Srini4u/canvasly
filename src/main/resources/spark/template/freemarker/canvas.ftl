@@ -13,8 +13,9 @@
 
 <!-- init block -->
 <script>
+    var signedRequest = JSON.parse( '${signedRequest}' );
+
     Sfdc.canvas(function() {
-        var signedRequest = JSON.parse( '${signedRequest}' );
         console.log( signedRequest );
         Sfdc.canvas.oauth.token(signedRequest.oauthToken);
         console.log( ' username ' + signedRequest.context.user.fullName );
@@ -32,9 +33,9 @@
 <!-- publish block -->
 <script>
     function canvasPublish(message) {
-        Sfdc.canvas.client.publish(signedRequest.client,{
+        Sfdc.canvas.client.publish( signedRequest.client,{
             name :  namespacePrefix  + canvasTopic,
-            payload : signedRequest
+            payload : message
         });
     }
 </script>
