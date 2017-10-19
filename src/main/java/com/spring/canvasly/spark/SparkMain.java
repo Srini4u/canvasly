@@ -1,9 +1,12 @@
 package com.spring.canvasly.spark;
 
 import com.spring.canvasly.services.EnvironmentService;
+import com.spring.canvasly.services.SecurityService;
+import com.spring.canvasly.services.VerificationService;
 import spark.ModelAndView;
 import spark.template.freemarker.FreeMarkerEngine;
 
+import java.util.HashMap;
 import java.util.Map;
 
 import static spark.Spark.*;
@@ -20,6 +23,14 @@ public class SparkMain {
         staticFiles.location("/static");
 
         before((request, response) -> {
+            VerificationService.verify(request, response);
+        });
+
+        exception(Exception.class, (exception, request, response) -> {
+            response.type("text/html");
+            Map<String, Object> attributes = new HashMap<String, Object>();
+            response.status(400);
+            response.body( exception.getMessage() );
         });
 
         after((request, response) -> {

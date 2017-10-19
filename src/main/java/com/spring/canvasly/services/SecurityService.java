@@ -27,7 +27,7 @@ import java.util.HashMap;
 public class SecurityService {
 
 
-    public static String verifyAndDecodeAsJson(String input, String secret) throws SecurityException {
+    public static String verifyAndDecodeAsJson(String input, String secret) throws Exception {
 
         String[] split = getParts(input);
 
@@ -55,7 +55,13 @@ public class SecurityService {
 
         // If we got this far, then the request was not tampered with.
         // return the request as a JSON string.
-        return writer.toString();
+        String output = writer.toString();
+
+
+        Object json = mapper.readValue(input, Object.class);
+        String indented = mapper.writerWithDefaultPrettyPrinter().writeValueAsString(json);
+
+        return indented;
     }
 
     private static String[] getParts(String input) {
