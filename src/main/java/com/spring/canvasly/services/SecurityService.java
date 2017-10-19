@@ -60,10 +60,10 @@ public class SecurityService {
         String output = writer.toString();
 
 
-        Object json = mapper.readValue(input, Object.class);
-        String indented = mapper.writerWithDefaultPrettyPrinter().writeValueAsString(json);
+//        Object json = mapper.readValue(input, Object.class);
+//        String indented = mapper.writerWithDefaultPrettyPrinter().writeValueAsString(json);
 
-        return indented;
+        return output;
     }
 
     private static String[] getParts(String input) {

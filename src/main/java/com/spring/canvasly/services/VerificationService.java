@@ -15,7 +15,7 @@ public class VerificationService {
 
     public static void verify(Request request, Response response) throws Exception {
         Map<String, String> environment = EnvironmentService.getEnvironmentMap();
-        String[] stsrs = request.raw().getParameterMap().get("signed_request")
+        String[] stsrs = request.raw().getParameterMap().get("signed_request");
         for( int i=0; i<stsrs.length ; i++ ) {
             System.out.println( i + "   "  + stsrs[i] );
         }
