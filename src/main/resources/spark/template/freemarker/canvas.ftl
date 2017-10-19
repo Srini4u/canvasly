@@ -8,6 +8,9 @@
     signedRequest <textarea id="signedRequest" rows="5" cols="100"> ${escapedSignedRequest} </textarea> <br/><br/><hr/><br/>
     <input id="canvasPublishMessage" value=""/> <button onclick="canvasPublish( document.getElementById('canvasPublishMessage').value )" > Publish </button> <br/><br/><hr/><br/>
     Subcribed Message <br/> <br/>  <div id="canvasSubscribed"/> <br/><br/><hr/><br/>
+    Subcribed Resize Event <br/> <br/>  <div id="canvasResizeSubscribed"/> <br/><br/><hr/><br/>
+    Self Resize Servicve <button onclick="showCurrentSize()">Show Current Size</button> <br/>
+    <input id="resizeWidthPx" value="" placeholder="width px"/> &nbsp; &nbsp; <input id="resizeHeightPx" value="" placeholder="height px"/> <button onclick="canvasResize( document.getElementById('resizeWidthPx').value, document.getElementById('resizeHeightPx').value )" > Resize Me </button> <br/><br/><hr/><br/>
 </div>
 
 
@@ -49,14 +52,31 @@
     }]);
 
     function onData(message) {
+        console.log(' canvas received message from visualforce ' + message.message );
         document.getElementById('canvasSubscribed').innerHTML = message.message;
     }
-
 </script>
 
 
 <!-- resize block -->
+<script>
+    function showCurrentSize() {
+        var sizes = Sfdc.canvas.client.size();
+        document.getElementById('resizeWidthPx').value = sizes.widths.pageWidth;
+        document.getElementById('resizeHeightPx').value = sizes.heights.pageHeight;
+    }
 
+    Sfdc.canvas.client.subscribe(signedRequest.client, [{
+        name: 'canvas.resize',          /** there is also, sfdc.streaming **/
+        onData: onResizeData
+    }]);
+
+    function onData(onResizeData) {
+        console.log(' canvas received resize event ');
+        console.log(onResizeData);
+        document.getElementById('canvasSubscribed').innerHTML = message.message;
+    }
+</script>
 
 <!-- api block -->
 
