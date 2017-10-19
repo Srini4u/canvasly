@@ -1,6 +1,6 @@
 <div class="canvasContainer">
     signedRequest :
-    <textarea readonly="true" rows="10">
+    <textarea rows="10" style="margin: 0px; width: 512px; height: 635px;">
         ${signedRequest}
     </textarea>
 </div>
