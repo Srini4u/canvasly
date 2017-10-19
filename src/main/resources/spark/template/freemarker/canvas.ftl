@@ -1,6 +1,10 @@
 <div class="canvasContainer">
-    signedRequest :
-    <textarea rows="10" style="margin: 0px; width: 512px; height: 635px;">
-        ${signedRequest}
-    </textarea>
+    signedRequest
+    <textarea id="signedRequest" rows="10" cols="100"> signed request </textarea>
 </div>
+
+
+<script>
+    var signedRequest = JSON.parse( ${signedRequest} );
+    console.log( signedRequest );
+</script>
