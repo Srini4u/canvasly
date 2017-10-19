@@ -11,7 +11,8 @@ public class CanvasService {
 
     public static Map<String, Object> landingPage(Request request, Response response) {
         Map<String, Object> attributeMap = new HashMap<String, Object>();
-        attributeMap.put( "signedRequest", StringEscapeUtils.escapeHtml( (String) request.raw().getAttribute("signedRequest" ) ));
+        attributeMap.put( "signedRequest", (String) request.raw().getAttribute("signedRequest" ) );
+        attributeMap.put( "escapedSignedRequest", StringEscapeUtils.escapeHtml( (String) request.raw().getAttribute("signedRequest" ) ));
         return attributeMap;
     }
 

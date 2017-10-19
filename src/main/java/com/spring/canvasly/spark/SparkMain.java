@@ -45,17 +45,17 @@ public class SparkMain {
         });
 
         post("/index", (request, response) -> {
-            response.type("application/xml");
+            response.type("text/html");
             return new ModelAndView(CanvasService.landingPage(request, response), "canvas.ftl");
         }, new FreeMarkerEngine());
 
         post("/opentext", (request, response) -> {
-            response.type("application/xml");
+            response.type("text/html");
             return new ModelAndView(CanvasService.landingPage(request, response), "canvas.ftl");
         }, new FreeMarkerEngine());
 
         post("/radius", (request, response) -> {
-            response.type("application/xml");
+            response.type("text/html");
             return new ModelAndView(CanvasService.landingPage(request, response), "canvas.ftl");
         }, new FreeMarkerEngine());
 
