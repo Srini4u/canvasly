@@ -1,5 +1,6 @@
 package com.spring.canvasly.spark;
 
+import com.spring.canvasly.services.CanvasService;
 import com.spring.canvasly.services.EnvironmentService;
 import com.spring.canvasly.services.SecurityService;
 import com.spring.canvasly.services.VerificationService;
@@ -42,13 +43,16 @@ public class SparkMain {
             return "";
         });
 
-        get("/opentext", (req, res) -> {
-            return "opentext";
-        });
+        get("/opentext", (request, response) -> {
+            response.type("application/xml");
+            return new ModelAndView(CanvasService.landingPage(request, response), "canvas.ftl");
+        }, new FreeMarkerEngine());
 
-        get("/radius", (req, res) -> {
-            return "radius";
-        });
+        get("/radius", (request, response) -> {
+            response.type("application/xml");
+            return new ModelAndView(CanvasService.landingPage(request, response), "canvas.ftl");
+        }, new FreeMarkerEngine());
+
     }
 
 }
