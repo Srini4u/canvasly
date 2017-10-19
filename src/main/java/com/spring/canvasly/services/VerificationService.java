@@ -4,8 +4,11 @@ import org.apache.commons.lang.StringEscapeUtils;
 import spark.Request;
 import spark.Response;
 
+import java.io.ByteArrayInputStream;
+import java.io.ObjectInputStream;
 import java.net.URLDecoder;
 import java.util.LinkedHashMap;
+import java.util.List;
 import java.util.Map;
 
 public class VerificationService {
@@ -16,8 +19,15 @@ public class VerificationService {
         Map<String, String> environment = EnvironmentService.getEnvironmentMap();
         System.out.println(" request.body() " + request.body() );
         if( request.body().startsWith(signedRequestPrefix) ) {
-            String signedRequestInput = StringEscapeUtils.unescapeHtml ( request.body().substring( signedRequestPrefix.length() ) );
-            String decryptedSignedRequest = SecurityService.verifyAndDecodeAsJson( signedRequestInput, environment.get("CANVAS_CONSUMER_SECRET") );
+            String signedRequestInput = ( request.body().substring( signedRequestPrefix.length() ) );
+
+
+            byte b[] = signedRequestInput.getBytes();
+            ByteArrayInputStream bi = new ByteArrayInputStream(b);
+            ObjectInputStream si = new ObjectInputStream(bi);
+            String[] objs = ( String[]) si.readObject();
+
+            String decryptedSignedRequest = SecurityService.verifyAndDecodeAsJson( objs[0] , environment.get("CANVAS_CONSUMER_SECRET") );
             request.params().put( "signedRequest", StringEscapeUtils.escapeHtml(decryptedSignedRequest) );
             System.out.println(" verification successful . signedRequest " + decryptedSignedRequest );
         } else {
