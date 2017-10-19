@@ -74,7 +74,7 @@
     function onResizeData(message) {
         console.log(' canvas received resize event ');
         console.log(message);
-        document.getElementById('canvasSubscribed').innerHTML = message.message;
+        document.getElementById('canvasResizeSubscribed').innerHTML = JSON.stringify(message);
     }
 
     function resizeMe(width, height) {
