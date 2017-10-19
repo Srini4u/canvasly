@@ -14,6 +14,7 @@ public class VerificationService {
 
     public static void verify(Request request, Response response) throws Exception {
         Map<String, String> environment = EnvironmentService.getEnvironmentMap();
+        System.out.println(" request.body() " + request.body() );
         if( request.body().startsWith(signedRequestPrefix) ) {
             String signedRequestInput = request.body().substring( signedRequestPrefix.length() );
             String decryptedSignedRequest = SecurityService.verifyAndDecodeAsJson( signedRequestInput, environment.get("CANVAS_CONSUMER_SECRET") );
