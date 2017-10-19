@@ -42,6 +42,17 @@
 </script>
 
 <!-- subscribe block -->
+<script>
+    Sfdc.canvas.client.subscribe(signedRequest.client, [{
+        name: namespacePrefix  + vfTopic,
+        onData: onData
+    }]);
+
+    function onData(message) {
+        console.log(' canvas received message from visualforce : ' + message );
+    }
+
+</script>
 
 
 <!-- resize block -->
