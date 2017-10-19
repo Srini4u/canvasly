@@ -7,9 +7,9 @@
 <div class="canvasContainer">
     signedRequest <textarea id="signedRequest" rows="5" cols="100"> ${escapedSignedRequest} </textarea> <br/><br/><hr/><br/>
     <input id="canvasPublishMessage" value=""/> <button onclick="canvasPublish( document.getElementById('canvasPublishMessage').value )" > Publish </button> <br/><br/><hr/><br/>
-    Subcribed Message <br/> <br/>  <div id="canvasSubscribed"/> <br/><br/><hr/><br/>
-    Subcribed Resize Event <br/> <br/>  <div id="canvasResizeSubscribed"/> <br/><br/><hr/><br/>
-    Self Resize Servicve <button onclick="showCurrentSize()">Show Current Size</button> <br/>
+    Subcribed Message <br/> <br/>  <div id="canvasSubscribed"> &nbsp; </div> <br/><br/><hr/><br/>
+    Subcribed Resize Event <br/> <br/>  <div id="canvasResizeSubscribed"> &nbsp; </div> <br/><br/><hr/><br/>
+    Self Resize Servicve <button onclick="showCurrentSize()">Show Current Size</button> <br/> <br/>
     <input id="resizeWidthPx" value="" placeholder="width px"/> &nbsp; &nbsp; <input id="resizeHeightPx" value="" placeholder="height px"/> <button onclick="resizeMe( document.getElementById('resizeWidthPx').value, document.getElementById('resizeHeightPx').value )" > Resize Me </button> <br/><br/><hr/><br/>
 </div>
 
