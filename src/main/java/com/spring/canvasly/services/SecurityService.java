@@ -66,6 +66,10 @@ public class SecurityService {
 
     private static String[] getParts(String input) {
 
+        if( input == null ) {
+            throw new SecurityException(String.format(" Can not access page without signed request. "));
+        }
+
         if (input == null || input.indexOf(".") <= 0) {
             throw new SecurityException(String.format("Input [%s] doesn't look like a signed request", input));
         }

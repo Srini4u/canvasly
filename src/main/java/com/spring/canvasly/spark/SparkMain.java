@@ -27,9 +27,8 @@ public class SparkMain {
         });
 
         exception(Exception.class, (exception, request, response) -> {
-            response.type("text/html");
-            Map<String, Object> attributes = new HashMap<String, Object>();
             response.status(400);
+            response.type("text/html");
             response.body( exception.getMessage() );
         });
 
