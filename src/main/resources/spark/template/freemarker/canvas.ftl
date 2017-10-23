@@ -95,7 +95,9 @@
 
 <script>
     function apiCall(url) {
+        console.log( ' api call ');
         var url = signedRequest.context.links.queryUrl + "?q=SELECT+id+,+name+from+Account+Limit+10";
+        console.log( ' url ' + url )
         var body = '';
         //var body = {body : {messageSegments : [{type: "Text", text: "Some Chatter Post"}]}};
         Sfdc.canvas.client.ajax( url,
