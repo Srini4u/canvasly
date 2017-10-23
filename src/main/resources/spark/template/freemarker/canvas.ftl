@@ -1,4 +1,3 @@
-<script src="/js/api.js"></script>
 <script src="/js/canvas-all.js"></script>
 <script src="/js/chatter-talk.js"></script>
 <script src="/js/json2.js"></script>
@@ -11,6 +10,9 @@
     Subcribed Resize Event <br/> <br/>  <div id="canvasResizeSubscribed"> &nbsp; </div> <br/><br/><hr/><br/>
     Self Resize Servicve <button onclick="showCurrentSize()">Show Current Size</button> <br/> <br/>
     <input id="resizeWidthPx" value="" placeholder="width px"/> &nbsp; &nbsp; <input id="resizeHeightPx" value="" placeholder="height px"/> <button onclick="resizeMe( document.getElementById('resizeWidthPx').value, document.getElementById('resizeHeightPx').value )" > Resize Me </button> <br/><br/><hr/><br/>
+    <button onclick="autogrow()"> autogrow </button> <br/><br/><hr/><br/>
+    api call : get URL <input id="inputAPIURL" value=""/> <button onclick="apiCall( document.getElementById('inputAPIURL').value )" > API </button> <br/><br/><hr/><br/>
+
 </div>
 
 
@@ -82,9 +84,34 @@
         var dimension = Sfdc.canvas.client.size(signedRequest.client);
         Sfdc.canvas.client.resize(signedRequest.client, {height : height + "px", width : width + "px" } );
     }
+
+    function autogrow() {
+        console.log(' autogrow ');
+        Sfdc.canvas.client.autogrow(signedRequest.client, true, 100);
+    }
 </script>
 
 <!-- api block -->
 
+<script>
+    function apiCall(url) {
+        var url = signedRequest.context.links.queryUrl + "?q=SELECT+id+,+name+from+Account+Limit+10";
+        var body = '';
+        //var body = {body : {messageSegments : [{type: "Text", text: "Some Chatter Post"}]}};
+        Sfdc.canvas.client.ajax( url,
+            {
+                client : signedRequest.client,
+                method: 'GET',
+                contentType: "application/json",
+                data: JSON.stringify(body),
+                success : function(data) {
+                    if (201 === data.status) {
+                        alert("Success");
+                    }
+                }
+            }
+        );
+    }
+</script>
 
 <!-- chatter block -->
