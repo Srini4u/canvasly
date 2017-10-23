@@ -12,6 +12,7 @@
     <input id="resizeWidthPx" value="" placeholder="width px"/> &nbsp; &nbsp; <input id="resizeHeightPx" value="" placeholder="height px"/> <button onclick="resizeMe( document.getElementById('resizeWidthPx').value, document.getElementById('resizeHeightPx').value )" > Resize Me </button> <br/><br/><hr/><br/>
     <button onclick="autogrow()"> autogrow </button> <br/><br/><hr/><br/>
     api call : get URL <input id="inputAPIURL" value=""/> <button onclick="apiCall( document.getElementById('inputAPIURL').value )" > API </button> <br/><br/><hr/><br/>
+    chatter post <input id="chatterPostMessage" value=""/> <button onclick="postToChatter( document.getElementById('chatterPostMessage').value )" > Post </button> <br/><br/><hr/><br/>
 
 </div>
 
@@ -95,17 +96,17 @@
 
 <script>
     function apiCall(url) {
-        console.log( ' api call ');
+        console.log( ' api call ' + signedRequest.context.links.queryUrl );
         var url = signedRequest.context.links.queryUrl + "?q=SELECT+id+,+name+from+Account+Limit+10";
         console.log( ' url ' + url )
         var body = '';
-        //var body = {body : {messageSegments : [{type: "Text", text: "Some Chatter Post"}]}};
+        // var body = {body : {messageSegments : [{type: "Text", text: "Some Chatter Post"}]}};
+        // data: JSON.stringify(body),
         Sfdc.canvas.client.ajax( url,
             {
                 client : signedRequest.client,
                 method: 'GET',
                 contentType: "application/json",
-                data: JSON.stringify(body),
                 success : function(data) {
                     if (201 === data.status) {
                         alert("Success");
@@ -117,3 +118,17 @@
 </script>
 
 <!-- chatter block -->
+
+<script>
+
+    function postToChatter(message) {
+        console.log(' posting to chatter ');
+        chatterTalk.post(signedRequest, message, chatterPostCallback);
+    }
+
+    function chatterPostCallback(message) {
+        console.log(' chatter post callback ' );
+        console.log( message );
+    }
+
+</script>
