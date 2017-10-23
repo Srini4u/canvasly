@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="a47192e2-27c3-48b7-9dfa-de383b1bc7ba" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/spark/template/freemarker/canvas.ftl" afterPath="$PROJECT_DIR$/src/main/resources/spark/template/freemarker/canvas.ftl" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -128,7 +127,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/resources/spark/template/freemarker/canvas.ftl">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="238">
-              <caret line="14" column="148" lean-forward="true" selection-start-line="14" selection-start-column="148" selection-end-line="14" selection-end-column="148" />
+              <caret line="14" column="148" lean-forward="false" selection-start-line="14" selection-start-column="148" selection-end-line="14" selection-end-column="148" />
               <folding />
             </state>
           </provider>
@@ -497,12 +496,12 @@
       <workItem from="1508331145978" duration="1581000" />
       <workItem from="1508358181863" duration="1015000" />
       <workItem from="1508363708230" duration="20929000" />
-      <workItem from="1508486531867" duration="8872000" />
+      <workItem from="1508486531867" duration="9471000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="32397000" />
+    <option name="totallyTimeSpent" value="32996000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1015" extended-state="6" />
@@ -518,7 +517,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32993197" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2777778" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2777778" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1705757" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -813,7 +812,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/resources/spark/template/freemarker/canvas.ftl">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
-          <caret line="14" column="148" lean-forward="true" selection-start-line="14" selection-start-column="148" selection-end-line="14" selection-end-column="148" />
+          <caret line="14" column="148" lean-forward="false" selection-start-line="14" selection-start-column="148" selection-end-line="14" selection-end-column="148" />
           <folding />
         </state>
       </provider>
