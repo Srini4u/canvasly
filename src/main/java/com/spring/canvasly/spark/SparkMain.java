@@ -41,7 +41,7 @@ public class SparkMain {
         });
 
         get("/", (req, res) -> {
-            return "Index Page";
+            return "Home Page";
         });
 
         post("/index", (request, response) -> {
