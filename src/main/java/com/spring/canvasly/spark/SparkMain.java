@@ -24,7 +24,7 @@ public class SparkMain {
         staticFiles.location("/static");
 
         before((request, response) -> {
-            VerificationService.verify(request, response);
+            //VerificationService.verify(request, response);
         });
 
         exception(Exception.class, (exception, request, response) -> {
@@ -41,20 +41,23 @@ public class SparkMain {
         });
 
         get("/", (req, res) -> {
-            return "";
+            return "Index Page";
         });
 
         post("/index", (request, response) -> {
+            VerificationService.verify(request, response);
             response.type("text/html");
             return new ModelAndView(CanvasService.landingPage(request, response), "canvas.ftl");
         }, new FreeMarkerEngine());
 
         post("/opentext", (request, response) -> {
+            VerificationService.verify(request, response);
             response.type("text/html");
             return new ModelAndView(CanvasService.landingPage(request, response), "canvas.ftl");
         }, new FreeMarkerEngine());
 
         post("/radius", (request, response) -> {
+            VerificationService.verify(request, response);
             response.type("text/html");
             return new ModelAndView(CanvasService.landingPage(request, response), "canvas.ftl");
         }, new FreeMarkerEngine());
