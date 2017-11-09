@@ -44,6 +44,11 @@ public class SparkMain {
             return "Home Page";
         });
 
+        get("/index", (request, response) -> {
+            VerificationService.verify(request, response);
+            return "Index Page";
+        });
+
         post("/index", (request, response) -> {
             VerificationService.verify(request, response);
             response.type("text/html");
